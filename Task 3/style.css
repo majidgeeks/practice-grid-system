@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+ 
+html{
+    font-size: 62%;
+    background-color: azure;
+}
+
+body{
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    font-size: 2rem;
+}
+
+.item-1{
+    background-color: aliceblue;
+}
+
+.item-2{
+    background-color:red ;
+}
+
+.item-3{
+    background-color: blue;
+}
+
+.item-4{
+    background-color: blanchedalmond;
+}
+
+.item-5{
+    background-color: green;
+}
+
+.item-6{
+    background-color: palegoldenrod;
+}
+
+.item-7{
+    background-color: salmon;
+}
+
+.item-8{
+    background-color: paleturquoise;
+}
+
+.item-9{
+    background-color: silver;
+}
+
+/* previously we did these changes in last task */
+/* .container{
+    width: 1000px;
+    /* background-color: black; 
+    display: grid;
+    /* grid-template-columns: repeat(3, 300px) ; this is an other method to set column */
+    /* grid-template-columns: 1fr 1fr 1fr ; */
+    /*  this will adjust width of whole and make responsive*/
+     /* grid-template-columns: 1fr 2fr 3fr ; */
+     /* an other method to distribute width of  */
+    /* container with different sizes with responsive  */ 
+    /* grid-template-rows: repeat(3, 200px) ; */
+    /* grid-column-gap: 20px; */
+    /* grid-row-gap: 20px;  */
+/* }  */
+
+/* our recently changes belongs to this container */
+/* How to position the grid items means childs of container */
+/*  item 1 in the place of item 3 */
+/* after it item1 to the place of item 9 */
+
+.container{
+    width: 1000px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    /*  this will adjust width of whole and make responsive*/
+     /* grid-template-columns: 1fr 2fr 3fr ; */
+     /* an other method to distribute width of  */
+    /* container with different sizes with responsive  */ 
+    grid-template-rows: repeat(3, 200px) ;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px; 
+}
+
