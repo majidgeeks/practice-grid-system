@@ -58,44 +58,45 @@ body{
 }
 
 /* previously we did these changes in last task */
-/* .container{
-    width: 1000px;
-    /* background-color: black; 
-    display: grid;
-    /* grid-template-columns: repeat(3, 300px) ; this is an other method to set column */
-    /* grid-template-columns: 1fr 1fr 1fr ; */
-    /*  this will adjust width of whole and make responsive*/
-     /* grid-template-columns: 1fr 2fr 3fr ; */
-     /* an other method to distribute width of  */
-    /* container with different sizes with responsive  */ 
-    /* grid-template-rows: repeat(3, 200px) ; */
-    /* grid-column-gap: 20px; */
-    /* grid-row-gap: 20px;  */
-/* }  */
+/* .item-1{
+    grid-column-start: 3 ;
+    grid-column-end: 4;
+} in this case we get item from 1 to item 3 place */
 
-/* our recently changes belongs to this container */
-/* How to position the grid items means childs of container */
-/*  item 1 in the place of item 3 */
-/* after it item1 to the place of item9 */
+/* .item-1{ */
+    /* grid-column-start: 3 ;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end:4 ; */
+/* }  in this case we get item1 to item 9 place */
+
+/* .item-3{
+    grid-column-start:1 ;
+    grid-column-end:2 ;
+    grid-row-start:1 ;
+    grid-row-end:2 ;
+}
+
+.item-2{
+    grid-column-start: 2 ;
+    grid-column-end: 3;
+    grid-row-start:1 ;
+    grid-row-end:2 ;
+} */
+
+/* our recently changes belongs to this starts from here  */
+/* in this task we will learn about what is grid area */
+
 
 .container{
     width: 1000px;
     background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    /*  this will adjust width of whole and make responsive*/
-     /* grid-template-columns: 1fr 2fr 3fr ; */
-     /* an other method to distribute width of  */
-    /* container with different sizes with responsive  */ 
     grid-template-rows: repeat(3, 200px) ;
     grid-column-gap: 20px;
     grid-row-gap: 20px; 
 }
-
-/* .item-1{
-    grid-column-start: 3 ;
-    grid-column-end: 4;
-} in this case we get item from 1 to item 3 place */
 
 .item-1{
     grid-column-start: 3 ;
@@ -111,9 +112,17 @@ body{
     grid-row-end:2 ;
 }
 
+/* we will apply grid area on this item */
+/* we can change our 4 line code into 1 line code using grid area */
 .item-2{
-    grid-column-start: 2 ;
-    grid-column-end: 3;
-    grid-row-start:1 ;
+    /* before grid area usage the was this */
+    /* grid-row-start:1 ;
     grid-row-end:2 ;
+    grid-column-start: 2 ;
+    grid-column-end: 3; */
+
+    /* after use of grid area the code is this */
+    grid-area: 1 / 1 / 2 / 3  ;
+    /* we can see in first is grid-row-start in second is grid-column-start in third
+    is grid-row-end and fourth one is grid-column-end */
 }
